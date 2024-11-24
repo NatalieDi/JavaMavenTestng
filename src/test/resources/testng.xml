@@ -3,9 +3,15 @@
 
 <suite name="Suite">
     <listeners>
-        <listener class-name="com.maven.java.CustomTestListener"/>
+        <listener class-name="com.maven.java.TestListener"/>
     </listeners>
     <test name="Test">
+        <groups>
+        <run>
+        <include name="before"/>
+        <include name="tearDown"/>
+        </run>
+        </groups>
         <classes>
             <class name="com.maven.java.ProjectTests"/>
         </classes>
